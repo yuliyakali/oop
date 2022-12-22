@@ -98,10 +98,10 @@ namespace ConsoleApp5
         }
         object INameAndCopy.DeepCopy()
         {
-            ResearchTeam magazine = new ResearchTeam(this.name, this.Last, this.nom);
-            magazine.AddPapers(this.Publ.ToArray().Select(a => ((INameAndCopy)a).DeepCopy()).ToArray());
-            magazine.AddMambers(this.User.ToArray().Select(a => ((Person)a).DeepCopy()).ToArray());
-            return magazine;
+            ResearchTeam research = new ResearchTeam(this.name, this.Last, this.nom);
+            research.AddPapers(this.Publ.ToArray().Select(a => ((INameAndCopy)a).DeepCopy()).ToArray());
+            research.AddMambers(this.User.ToArray().Select(a => ((Person)a).DeepCopy()).ToArray());
+            return research;
         }
         string INameAndCopy.Naming => this.name;
 
